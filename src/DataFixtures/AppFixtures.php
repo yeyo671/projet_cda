@@ -63,8 +63,8 @@ class AppFixtures extends Fixture
             $manager->persist($category);
         }
 
-        //Création de 2 Peintures/Catégories
-        for($j=0; $j<2; $j++){
+        //Création de 10 Peintures/Catégories
+        for($j=0; $j<10; $j++){
             $paint = new Paint();
             
             $paint->setName($faker->words(3,true));
