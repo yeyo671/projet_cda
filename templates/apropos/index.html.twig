@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(/img/peintre.png);">
+        <div class="overlay" style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <blockquote class="blockquote mb-0">
+                        <p class="h2 text-white">
+                            {{ painter.about }}
+                        </p>
+                        <footer class="blockquote-footer text-white-50 mb-0">
+                            {{ painter.firstname }} {{ painter.name }}
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
