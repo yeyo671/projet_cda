@@ -16,7 +16,7 @@
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6 lift lift-lg" data-aos="fade-in">
                <div class="row gx-0">
-                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url(/img/peinture.png);" href="#!">
+                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url(/img/peinture.png);" href="{{path('actualites_details', {'slug': blogpost.slug})}}">
                      <!-- Image (placeholder) -->
                      <img src='/img/peinture.png' alt="..." class="img-fluid d-md-none invisible">
                      <!-- Shape -->
@@ -28,7 +28,7 @@
                   </a>
                   <div class="col-12 col-md-6 order-md-1">
                      <!-- Body -->
-                     <a class="card-body" href="#!">
+                     <a class="card-body">
                         <!-- Heading -->
                         <h3>
                            {{blogpost.title}}
@@ -39,7 +39,7 @@
                         </p>
                      </a>
                      <!-- Meta -->
-                     <a class="card-meta" href="#!">
+                     <a class="card-meta">
                         <!-- Divider -->
                         <hr class="card-meta-divider">
                         <!-- Date -->
