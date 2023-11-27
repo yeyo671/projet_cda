@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid px-md-0">
+    <div class="row justify-content-between gx-0 mx-md-0 mb-6 mb-md-2">
+        <div class="col-12 col-md-3 vh-md-100 mx-auto" style="top: 0;">
+            <aside class="flex-grow-1 py-8 py-md-10">
+                <div>
+                    <h2>{{paint.name}}</h2>
+                    {% for category in paint.category %}
+                        <span class="badge bg-secondary">{{category.name}}</span>
+                    {% endfor %}
+                </div>
+                <p class="fs-lg mb-7 text-muted">{{paint.description}}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h6 class="d-flex mb-0 text-uppercase">
+                            Date de réalisations
+                            <span class="ms-auto">{{paint.date|date('d/m/Y')}}</span>
+                        </h6>
+                    </li>
+                    <li class="list-group-item">
+                        <h6 class="d-flex mb-0 text-uppercase">
+                            Largeur
+                            <span class="ms-auto">{{paint.width}}</span>
+                        </h6>
+                    </li>
+                    <li class="list-group-item">
+                        <h6 class="d-flex mb-0 text-uppercase">
+                            Hauteur
+                            <span class="ms-auto">{{paint.height}}</span>
+                        </h6>
+                    </li>
+                    <li class="list-group-item">
+                        <h6 class="d-flex mb-0 text-uppercase">
+                            Prix
+                            <span class="ms-auto"><strong>{{paint.price}}€</strong></span>
+                        </h6>
+                    </li>   
+                </ul>
+            </aside>
+        </div>
+        <div class="col-12 col-md-7">
+          <!-- Images -->
+          <section class="pb-8 pt-md-10 pb-md-4">
+            <a class="d-block">
+                <img src={{paint.file}}>
+            </a>
+          </section>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -2,9 +2,11 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Paint;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @extends ServiceEntityRepository<Paint>
@@ -34,25 +36,19 @@ class PaintRepository extends ServiceEntityRepository
         ;
     }
 
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('p.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+    * @return Paint[] Returns an array of Paint objects
+    */
 
-//    public function findOneBySomeField($value): ?Paint
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    public function findAllPortfolio(Category $category): array
+    {
+        return $this->createQueryBuilder('p')
+        ->where(':category MEMBER OF p.category')
+        ->andWhere('p.portfolio = TRUE')
+        ->setParameter('category', $category)
+        ->getQuery()
+        ->getResult();
+    }
+
 }
+

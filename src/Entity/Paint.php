@@ -134,6 +134,7 @@ class Paint
     {
         return $this->date_of_completion;
     }
+    
 
     public function setDateOfCompletion(?\DateTimeInterface $date_of_completion): static
     {

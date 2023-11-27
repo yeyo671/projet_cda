@@ -26,7 +26,7 @@ class Category
     private ?string $slug = null;
 
     #[ORM\ManyToMany(targetEntity: Paint::class, mappedBy: 'category')]
-    private Collection $paints;
+    private $paints;
 
     public function __construct()
     {

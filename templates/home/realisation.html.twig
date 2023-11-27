@@ -13,7 +13,7 @@
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6 lift lift-lg" data-aos="fade-in">
                <div class="row gx-0">
-                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url({{paint.file}});" href="#!">
+                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url({{paint.file}});"  href="{{path('realisations_details', {'slug': paint.slug})}}">
                      <!-- Image (placeholder) -->
                      <img src={{paint.file}} alt="..." class="img-fluid d-md-none invisible">
                      <!-- Shape -->
@@ -25,7 +25,7 @@
                   </a>
                   <div class="col-12 col-md-6 order-md-1">
                      <!-- Body -->
-                     <a class="card-body" href="#!">
+                     <a class="card-body" href="{{path('realisations_details', {'slug': paint.slug})}}">
                         <!-- Heading -->
                         <h3>
                            {{paint.name}}
@@ -36,7 +36,7 @@
                         </p>
                      </a>
                      <!-- Meta -->
-                     <a class="card-meta" href="#!">
+                     <a class="card-meta">
                         <!-- Divider -->
                         <hr class="card-meta-divider">
                         <!-- Date -->

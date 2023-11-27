@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <!-- WELCOME -->
+    <section class="pt-8 pt-md-12 pb-12 pb-md-15">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Headin -->
+            <h1 class="display-1 fw-bold">
+              Mon Portfolio
+            </h1>
+            <!-- Text -->
+            <p class="lead text-secondary mb-4">
+              Chaque toile de ce portfolio est une fenêtre ouverte sur un monde vibrant de couleurs, où l'imagination de l'artiste peintre se mêle harmonieusement à la réalité, créant des œuvres qui parlent autant à l'âme qu'aux yeux.
+            </p>
+            <!-- Badges -->
+            <nav class="nav justify-content-center">
+              <a class="badge rounded-pill text-bg-secondary-subtle active me-1 mb-1" href="#" data-bs-toggle="pill" data-filter="*" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">Tous</span>
+              </a>
+              {% for category in categories %}
+              <a class="badge rounded-pill text-bg-secondary-subtle me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".{{category.name}}" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">{{category.name}}</span>
+              </a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- CONTENT -->
+    <section class="py-8 py-md-11 mt-n10 mt-md-n14">
+      <div class="container">
+        <div class="row" id="portfolio" data-isotope='{"layoutMode": "fitRows"}'>
+          <div class="col-12 col-md-4 product">
+            <!-- Card -->
+            <a class="card card-flush mb-7" href="#!">
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img-top rounded shadow-light-lg" src="/img/peinture.png" alt="...">
+              </div>
+              <!-- Footer -->
+              <div class="card-footer">
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-body-secondary">Branding</h6>
+                <!-- Heading -->
+                <h4 class="mb-0">Curology Campaign</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x text-gray-200">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
+    </div>
+{% endblock %}
