@@ -34,3 +34,12 @@ symfony serve -d
 ``` bash
 php bin/phpunit --testdox
 ```
+
+
+## Pour se connecter à la base de donnée
+
+```bash
+
+mysql -p
+use main
+```
