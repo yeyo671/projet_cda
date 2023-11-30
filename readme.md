@@ -36,10 +36,22 @@ php bin/phpunit --testdox
 ```
 
 
+## Ajouter des données de tests
+
+``` bash
+symfony console doctrine:fixtures:load
+```
+
 ## Pour se connecter à la base de donnée
 
 ```bash
 
 mysql -p
 use main
+```
+
+## Envoie des mails de contacts
+
+``` bash
+symfony console app:send-contact
 ```

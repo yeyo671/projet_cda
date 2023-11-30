@@ -42,13 +42,16 @@ class PaintRepository extends ServiceEntityRepository
 
     public function findAllPortfolio(Category $category): array
     {
-        return $this->createQueryBuilder('p')
+        $results = $this->createQueryBuilder('p')
         ->where(':category MEMBER OF p.category')
         ->andWhere('p.portfolio = TRUE')
         ->setParameter('category', $category)
         ->getQuery()
         ->getResult();
-    }
 
+    dump($results); // Ajouter cette ligne pour déboguer
+    return $results;
+    }
+    
 }
 
