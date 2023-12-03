@@ -1,15 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Title -->
     <title>
-        {% block title %} Welcome ! 
+        {% block title %}
+            Welcome
         {% endblock %}
     </title>
     {% block stylesheets %}
-        {{encore_entry_link_tags('app')}}
+        {{  encore_entry_link_tags('app')}}
     {% endblock %}
+
   </head>
   <body>
 
@@ -26,38 +30,42 @@
 
             <!-- Text -->
             <p class="mb-6 text-body-secondary">
-              Administration du site internet
+              Administration du site web
             </p>
 
             <!-- Form -->
-            <form class="mb-6">
+            <form method="post" class="mb-6">
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+
+
               <!-- Email -->
               <div class="form-group">
-                <label class="form-label" for="email">
-                  Email Address
-                </label>
-                <input type="email" class="form-control" id="email" placeholder="name@address.com">
+                <label for="inputEmail">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
               </div>
 
               <!-- Password -->
               <div class="form-group mb-5">
-                <label class="form-label" for="password">
-                  Password
-                </label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
               </div>
 
               <!-- Submit -->
               <button class="btn w-100 btn-primary" type="submit">
-                Sign up
+                Sign in
               </button>
 
             </form>
-
-            <!-- Text -->
-            <p class="mb-0 fs-sm text-body-secondary">
-              Already have an account? <a href="signin-cover.html">Log in</a>.
-            </p>
 
           </div>
           <div class="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
@@ -74,15 +82,9 @@
       </div> <!-- / .container -->
     </section>
 
-    <!-- JAVASCRIPT -->
-    <!-- Map JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    
-    <!-- Vendor JS -->
-    <script src="./assets/js/vendor.bundle.js"></script>
-    
-    <!-- Theme JS -->
-    <script src="./assets/js/theme.bundle.js"></script>
-
+    {% block javascripts %}
+        {{  encore_entry_link_tags('app') }}
+    {% endblock %}
   </body>
 </html>
+
