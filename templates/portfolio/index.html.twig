@@ -26,13 +26,13 @@
             <div class="row" id="portfolio" data-isotope='{"layoutMode": "fitRows"}'>
                 {% for category in categories %}
                     {% if category.paints|length > 0 %}
-                        {% set img = category.paints|last %}
+                        {% set paint = category.paints|last %}
                         <div class="col-12 col-md-4 product">
                             <!-- Card -->
                             <a class="card card-flush mb-7" href="{{ path('portfolio_categorie', {'slug': category.slug}) }}">
                                 <!-- Image -->
                                 <div class="card-zoom">
-                                    <img class="card-img-top rounded shadow-light-lg" src="{{ img.file }}" alt="{{ img.name }}">
+                                    <img class="card-img-top rounded shadow-light-lg" src="{{vich_uploader_asset(paint,'imageFile')}}" alt="...">
                                 </div>
                                 <!-- Footer -->
                                 <div class="card-footer">

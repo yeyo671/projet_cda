@@ -13,9 +13,9 @@
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6 lift lift-lg" data-aos="fade-in">
                <div class="row gx-0">
-                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url({{paint.file}});"  href="{{path('realisations_details', {'slug': paint.slug})}}">
+                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url({{vich_uploader_asset(paint,'imageFile')}});"  href="{{path('realisations_details', {'slug': paint.slug})}}">
                      <!-- Image (placeholder) -->
-                     <img src={{paint.file}} alt="..." class="img-fluid d-md-none invisible">
+                     <img src="{{vich_uploader_asset(paint,'imageFile')}}" alt="..." class="img-fluid d-md-none invisible">
                      <!-- Shape -->
                      <div class="shape shape-start shape-fluid-y text-white d-none d-md-block">
                         <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">

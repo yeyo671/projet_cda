@@ -31,9 +31,9 @@
             <div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
                 {% for paint in paints %}
                 <div class="col-12 col-md-4">
-                    <a class="card shadow-light-lg mb-7" href="#!" data-bigpicture='{"imgSrc": "{{paint.file}}"}' href="#">
+                    <a class="card shadow-light-lg mb-7" href="#!" data-bigpicture='{"imgSrc": "{{vich_uploader_asset(paint,'imageFile')}}"}' href="#">
                         <div>
-                            <img class="card-img" src="{{paint.file}}" alt="...">
+                            <img class="card-img" src="{{vich_uploader_asset(paint,'imageFile')}}" alt="...">
                         </div>
                     </a>
                 </div>

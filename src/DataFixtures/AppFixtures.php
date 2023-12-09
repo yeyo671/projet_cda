@@ -71,7 +71,7 @@ class AppFixtures extends Fixture
                 $paint->setDescription($faker->text());
                 $paint->setPortfolio($faker->randomElement([true, false]));
                 $paint->setSlug($faker->slug());
-                $paint->setFile('/img/peinture.png');
+                $paint->setFile('/peinture.png');
                 $paint->addCategory($category);
                 $paint->setPrice($faker->randomFloat(2, 100, 9999));
                 $paint->setUser($user);

@@ -7,8 +7,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: PaintRepository::class)]
+#[Vich\Uploadable]
+
 class Paint
 {
     #[ORM\Id]
@@ -48,6 +52,9 @@ class Paint
 
     #[ORM\Column(length: 255)]
     private ?string $file = null;
+
+    #[Vich\UploadableField(mapping: 'peinture_images', fileNameProperty: 'file')]
+    private ?File $imageFile = null;
 
     #[ORM\ManyToOne(inversedBy: 'paints')]
     #[ORM\JoinColumn(nullable: false)]
@@ -201,6 +208,20 @@ class Paint
         $this->file = $file;
 
         return $this;
+    }
+
+    public function setImageFile(File $file = null)
+    {
+        $this->imageFile = $file;
+    
+        if ($file) {
+            $this->date = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
     }
 
     public function getUser(): ?User
