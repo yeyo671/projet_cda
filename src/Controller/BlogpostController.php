@@ -3,7 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Blogpost;
+use App\Entity\Comment;
+use App\Form\CommentType;
 use App\Repository\BlogpostRepository;
+use App\Repository\CommentRepository;
+use App\Service\CommentService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -32,9 +36,27 @@ class BlogpostController extends AbstractController
     }
 
     #[Route('//actualites/{slug})', name: 'actualites_details')]
-    public function details (Blogpost $blogpost): Response {
-       return $this->render('blogpost/detail.html.twig', [
-           'blogpost'=>$blogpost,
-       ]);
-    }
+    public function detail(
+        Blogpost $blogpost, 
+        Request $request, 
+        CommentService $commentService,
+        CommentRepository $commentRepository
+        ): Response
+    {
+        $comments = $commentRepository->findComment($blogpost);
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+    
+        if ($form->isSubmitted() && $form->isValid()) {
+            $commentService->persistComment($comment, $blogpost, null);
+            return $this->redirectToRoute('actualites_details', ['slug' => $blogpost->getSlug()]);
+        }
+    
+        return $this->render('blogpost/detail.html.twig', [
+            'blogpost' => $blogpost,
+            'form' => $form->createView(),
+            'comments' => $comments,
+        ]);
+    }    
 }
