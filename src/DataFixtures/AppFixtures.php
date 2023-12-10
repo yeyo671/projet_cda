@@ -26,8 +26,8 @@ class AppFixtures extends Fixture
         // Création d'un utilisateur de test
         $user = new User();
         $user->setEmail('user@test.com');
-        $user->setFirstname($faker->firstName());
-        $user->setName($faker->name());
+        $user->setFirstname('Aurélien');
+        $user->setName('Delacroix');
         $user->setPhoneNumber($faker->phoneNumber());
         $user->setAbout($faker->text());
         $user->setInstagram('instagram');

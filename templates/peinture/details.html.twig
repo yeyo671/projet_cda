@@ -23,13 +23,13 @@
                     <li class="list-group-item">
                         <h6 class="d-flex mb-0 text-uppercase">
                             Largeur
-                            <span class="ms-auto">{{paint.width}}</span>
+                            <span class="ms-auto">{{paint.width}}cm</span>
                         </h6>
                     </li>
                     <li class="list-group-item">
                         <h6 class="d-flex mb-0 text-uppercase">
                             Hauteur
-                            <span class="ms-auto">{{paint.height}}</span>
+                            <span class="ms-auto">{{paint.height}}cm</span>
                         </h6>
                     </li>
                     <li class="list-group-item">
@@ -45,7 +45,7 @@
           <!-- Images -->
           <section class="pb-8 pt-md-10 pb-md-4">
             <a class="d-block">
-                <img src={{vich_uploader_asset(paint,'imageFile')}}>
+                <img src={{vich_uploader_asset(paint,'imageFile')|imagine_filter('full')}}>
             </a>
           </section>
 
