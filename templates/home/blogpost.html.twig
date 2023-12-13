@@ -5,18 +5,12 @@
          <div class="col-12 col-md">
             <!-- Heading -->
             <h3 class="mb-0">
-               Latest Stories
+               Dernières actualités
             </h3>
             <!-- Text -->
             <p class="mb-0 text-body-secondary">
-               Here’s what we've been up to recently.
+               Mes dernières actualités
             </p>
-         </div>
-         <div class="col-12 col-md-auto">
-            <!-- Button -->
-            <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
-            View all
-            </a>
          </div>
       </div>
       <!-- / .row -->
@@ -26,9 +20,9 @@
             <!-- Card -->
             <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
                <!-- Image -->
-               <a class="card-img-top" href="#!">
+               <a class="card-img-top" href="{{path('actualites_details', {'slug': blogposts.slug})}}">
                   <!-- Image -->
-                  <img src="/img/peinture.png" alt="..." class="card-img-top">
+                  <img src="/img/blogpost.jpg" alt="..." class="card-img-top">
                   <!-- Shape -->
                   <div class="position-relative">
                      <div class="shape shape-bottom shape-fluid-x text-white">
@@ -39,7 +33,7 @@
                   </div>
                </a>
                <!-- Body -->
-               <a class="card-body" href="#!">
+               <a class="card-body" href="{{path('actualites_details', {'slug': blogposts.slug})}}">
                   <!-- Heading -->
                   <h3>
                      {{blogposts.title}}

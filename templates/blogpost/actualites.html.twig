@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Actualités{% endblock %}
+
 {% block body %}
 <!-- ARTICLES -->
 <section class="pt-7 pt-md-10">
@@ -16,7 +18,7 @@
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6 lift lift-lg" data-aos="fade-in">
                <div class="row gx-0">
-                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url(/img/peinture.png);" href="{{path('actualites_details', {'slug': blogpost.slug})}}">
+                  <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url(/img/blogpost.jpg);" href="{{path('actualites_details', {'slug': blogpost.slug})}}">
                      <!-- Image (placeholder) -->
                      <img src='/img/peinture.png' alt="..." class="img-fluid d-md-none invisible">
                      <!-- Shape -->

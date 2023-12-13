@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Peinture{% endblock %}
+
+
 {% block body %}
 
 <div class="container-fluid px-md-0">
@@ -41,14 +44,11 @@
                 </ul>
             </aside>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-8">
           <!-- Images -->
-          <section class="pb-8 pt-md-10 pb-md-4">
-            <a class="d-block">
-                <img src={{vich_uploader_asset(paint,'imageFile')|imagine_filter('full')}}>
-            </a>
+          <section class="pt-md-10">
+            <img class="w-100 h-auto" src={{vich_uploader_asset(paint,'imageFile')|imagine_filter('full')}} alt="...">
           </section>
-
         </div>
     </div>
 </div>
