@@ -29,9 +29,8 @@ class ContactService {
         }
     }
 
-    public function setContactAsSent(Contact $contact): void {
+    public function isSend(Contact $contact): void {
         $contact->setIsSend(true);
-        
         $this->manager->persist($contact);
         $this->manager->flush();
     }

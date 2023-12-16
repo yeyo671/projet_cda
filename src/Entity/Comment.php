@@ -123,4 +123,5 @@ class Comment
 
         return $this;
     }
+
 }

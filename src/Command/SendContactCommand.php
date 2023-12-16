@@ -45,10 +45,8 @@ class SendContactCommand extends Command {
                 ->text($mail->getMessage());
     
             $this->mailer->send($email);
-            $this->contactService->setContactAsSent($mail);
-
+            $this->contactService->isSend($mail);
         }
-    
         return Command::SUCCESS;
     }
 

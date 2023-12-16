@@ -52,6 +52,8 @@ use main
 
 ## Envoie des mails de contacts
 
+Les mails de prise de contact sont stockées dans la base de données, pour les envoyer au peintre par mail, il faut mettre en place un cron sur:
+
 ``` bash
 symfony console app:send-contact
 ```
