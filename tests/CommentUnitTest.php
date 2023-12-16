@@ -68,6 +68,7 @@ class CommentUnitTest extends TestCase
         $this->assertEmpty($comment->getContent());
         $this->assertEmpty($comment->getBlogpost());
         $this->assertEmpty($comment->getPaint());
+        $this->assertEmpty($comment->getId());
 
     }
 }

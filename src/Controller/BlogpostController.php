@@ -23,7 +23,7 @@ class BlogpostController extends AbstractController
         Request $request
     ): Response
     {
-        $data = $blogpostRepository->findBy([],['id' => 'DESC']);
+        $data = $blogpostRepository->findBy([],['date' => 'DESC']);
         $blogposts = $paginator->paginate(
             $data,
             $request->query->getInt('page', 1),

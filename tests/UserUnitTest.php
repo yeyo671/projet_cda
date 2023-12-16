@@ -2,6 +2,8 @@
 
 namespace App\Tests;
 
+use App\Entity\Blogpost;
+use App\Entity\Paint;
 use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
@@ -52,4 +54,33 @@ class UserUnitTest extends TestCase
         $this->assertEmpty($user->getAbout());
         $this->assertEmpty($user->getInstagram());
     }
+
+    public function testAddGetRemovePaint()
+    {
+        $user = new User();
+        $paint = new Paint();
+
+        $this->assertEmpty($user->getPaints());
+
+        $user->addPaint($paint);
+        $this->assertContains($paint, $user->getPaints());
+
+        $user->removePaint($paint);
+        $this->assertEmpty($user->getPaints());
+    }
+
+    public function testAddGetRemoveBlogpost()
+    {
+        $user = new User();
+        $blogpost = new Blogpost();
+
+        $this->assertEmpty($user->getBlogposts());
+
+        $user->addBlogpost($blogpost);
+        $this->assertContains($blogpost, $user->getBlogposts());
+
+        $user->removeBlogpost($blogpost);
+        $this->assertEmpty($user->getBlogposts());
+    }
+
 }

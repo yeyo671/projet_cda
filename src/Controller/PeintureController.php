@@ -17,13 +17,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class PeintureController extends AbstractController
 {
     #[Route('/realisations', name: 'realisations')]
+    
     public function realisations(
         PaintRepository $paintRepository,
         PaginatorInterface $paginator,
         Request $request
         ): Response
     {
-        $data = $paintRepository->findBy([],['id' => 'DESC']);
+        $data = $paintRepository->findBy([],['date' => 'DESC']);
         $paints = $paginator->paginate(
             $data,
             $request->query->getInt('page',1)

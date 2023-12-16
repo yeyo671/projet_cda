@@ -29,7 +29,7 @@ class PaintCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextareaField::new('description')->hideOnIndex(),
-            DateField::new('date_of_completion')->hideOnForm(),
+            DateField::new('date_of_completion'),
             NumberField::new('height')->hideOnIndex(),
             NumberField::new('width')->hideOnIndex(),
             NumberField::new('price')->hideOnIndex(),
@@ -41,11 +41,12 @@ class PaintCrudController extends AbstractCrudController
             ->setFormTypeOptions([
                 'constraints' => [
                     new File([
-                        'maxSize' => '2M', // Taille maximale, par exemple 2M pour 2 Mo
+                        'maxSize' => '2M',
                         'maxSizeMessage' => 'The file is too large ({{ size }} {{ suffix }}). Allowed maximum size is {{ limit }} {{ suffix }}.',
                     ])
                 ],
-            ]),            ImageField::new('file')->setBasePath('/uploads/peintures/')->onlyOnIndex(),
+            ]),            
+            ImageField::new('file')->setBasePath('/uploads/peintures/')->onlyOnIndex(),
             SlugField::new('slug')->setTargetFieldName('name')->hideOnIndex(),
             AssociationField::new('category'),
         ];

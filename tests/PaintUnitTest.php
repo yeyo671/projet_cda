@@ -4,6 +4,7 @@ namespace App\Tests;
 
 use App\Entity\Paint;
 use App\Entity\Category;
+use App\Entity\Comment;
 use App\Entity\User;
 use DateTime;
 use PHPUnit\Framework\TestCase;
@@ -93,5 +94,34 @@ class PaintUnitTest extends TestCase
         $this->assertEmpty($paint->getFile());
         $this->assertEmpty($paint->getCategory());
         $this->assertEmpty($paint->getUser());
+        $this->assertEmpty($paint->getId());
+    }
+
+    public function testAddGetRemoveComment()
+    {
+        $paint = new Paint();
+        $comment = new Comment();
+
+        $this->assertEmpty($paint->getComments());
+
+        $paint->addComment($comment);
+        $this->assertContains($comment, $paint->getComments());
+
+        $paint->removeComment($comment);
+        $this->assertEmpty($paint->getComments());
+    }
+
+    public function testAddGetRemoveCategory()
+    {
+        $paint = new Paint();
+        $category = new Category();
+
+        $this->assertEmpty($paint->getCategory());
+
+        $paint->addCategory($category);
+        $this->assertContains($category, $paint->getCategory());
+
+        $paint->removeCategory($category);
+        $this->assertEmpty($paint->getCategory());
     }
 }

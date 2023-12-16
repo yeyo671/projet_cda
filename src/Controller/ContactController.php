@@ -19,10 +19,10 @@ class ContactController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
+        //check si le formulaire est soumis et valide => check si token CSRF valdide
         if($form->isSubmitted() && $form->isValid()){
             $contact = $form->getData();
             $contactService->persistContact($contact);
-            
             return $this->redirectToRoute('contact');
         }
 

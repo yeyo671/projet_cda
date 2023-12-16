@@ -82,7 +82,7 @@ class Contact
         return $this;
     }
 
-    public function isIsSend(): ?bool
+    public function getIsSend(): ?bool
     {
         return $this->isSend;
     }

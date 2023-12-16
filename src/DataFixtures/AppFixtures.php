@@ -29,7 +29,7 @@ class AppFixtures extends Fixture
         $user->setFirstname('Aurélien');
         $user->setName('Delacroix');
         $user->setPhoneNumber($faker->phoneNumber());
-        $user->setAbout($faker->text());
+        $user->setAbout('Aurélien Delacroix, un jeune artiste peintre français de 23 ans originaire de Marseille, est reconnu pour son style unique inspiré par Gustave Moreau. Ses œuvres, mêlant couleurs vives et symbolisme, explorent les thèmes mythologiques et la nature, créant un univers onirique où se rencontrent mythes anciens et sensibilité moderne.');
         $user->setInstagram('instagram');
         $user->setRoles(['ROLE_PEINTRE']);
         $password = $this->encoder->hashPassword($user, 'password');

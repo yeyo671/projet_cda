@@ -35,18 +35,17 @@ class SendContactCommand extends Command {
 
     protected function execute(InputInterface $input, OutputInterface $output){
         $toSend = $this->contactRepository->findBy(['isSend' => false]);
-        $painter = $this->userRepository->getPainter();
-        $address = new Address($painter->getEmail(), $painter->getName() . ' ' . $painter->getFirstName());
+        $address = new Address($this->userRepository->getPainter()->getEmail(), $this->userRepository->getPainter()->getName() . ' ' . $this->userRepository->getPainter()->getFirstName());
     
-        foreach ($toSend as $contact) {
+        foreach ($toSend as $mail) {
             $email = (new Email())
-                ->from($contact->getEmail())
+                ->from($mail->getEmail())
                 ->to($address)
-                ->subject('Nouveau message de ' . $contact->getName())
-                ->text($contact->getMessage());
+                ->subject('Nouveau message de ' . $mail->getName())
+                ->text($mail->getMessage());
     
             $this->mailer->send($email);
-            $this->contactService->setContactAsSent($contact);
+            $this->contactService->setContactAsSent($mail);
 
         }
     
