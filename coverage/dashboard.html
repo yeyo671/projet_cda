@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\wamp64\www\test\project_cda\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.29" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.29" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.29" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\wamp64\www\test\project_cda\src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Command/CreateUserCommand.php.html#13">App\Command\CreateUserCommand</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/SendContactCommand.php.html#15">App\Command\SendContactCommand</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/BlogpostCrudController.php.html#15">App\Controller\Admin\BlogpostCrudController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CategoryCrudController.php.html#13">App\Controller\Admin\CategoryCrudController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CommentCrudController.php.html#19">App\Controller\Admin\CommentCrudController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/DashboardController.php.html#16">App\Controller\Admin\DashboardController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/PaintCrudController.php.html#20">App\Controller\Admin\PaintCrudController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/UserCrudController.php.html#14">App\Controller\Admin\UserCrudController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AproposController.php.html#10">App\Controller\AproposController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BlogpostController.php.html#17">App\Controller\BlogpostController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ContactController.php.html#13">App\Controller\ContactController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#11">App\Controller\HomeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PeintureController.php.html#17">App\Controller\PeintureController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PortfolioController.php.html#12">App\Controller\PortfolioController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#10">App\Controller\SecurityController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#14">App\DataFixtures\AppFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#13">App\EventSubscriber\EasyAdminSubscriber</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CommentType.php.html#17">App\Form\CommentType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ContactType.php.html#15">App\Form\ContactType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BlogpostRepository.php.html#17">App\Repository\BlogpostRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CategoryRepository.php.html#17">App\Repository\CategoryRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CommentRepository.php.html#19">App\Repository\CommentRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ContactRepository.php.html#17">App\Repository\ContactRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PaintRepository.php.html#19">App\Repository\PaintRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#21">App\Repository\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#19">App\Security\AppAuthenticator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/CommentService.php.html#14">App\Service\CommentService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#10">App\Service\ContactService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Twig/AppExtension.php.html#9">App\Twig\AppExtension</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#13">App\Entity\User</a></td><td class="text-right">79%</td></tr>
+       <tr><td><a href="Entity/Comment.php.html#9">App\Entity\Comment</a></td><td class="text-right">86%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#14">App\DataFixtures\AppFixtures</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Entity/User.php.html#13">App\Entity\User</a></td><td class="text-right">40</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#13">App\EventSubscriber\EasyAdminSubscriber</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#19">App\Security\AppAuthenticator</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/BlogpostController.php.html#17">App\Controller\BlogpostController</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/PeintureController.php.html#17">App\Controller\PeintureController</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Repository/CommentRepository.php.html#19">App\Repository\CommentRepository</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#21">App\Repository\UserRepository</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#10">App\Service\ContactService</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Command/SendContactCommand.php.html#15">App\Command\SendContactCommand</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ContactController.php.html#13">App\Controller\ContactController</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/PortfolioController.php.html#12">App\Controller\PortfolioController</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Command/CreateUserCommand.php.html#21"><abbr title="App\Command\CreateUserCommand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#34"><abbr title="App\Command\CreateUserCommand::configure">configure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#41"><abbr title="App\Command\CreateUserCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/SendContactCommand.php.html#23"><abbr title="App\Command\SendContactCommand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/SendContactCommand.php.html#36"><abbr title="App\Command\SendContactCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/BlogpostCrudController.php.html#17"><abbr title="App\Controller\Admin\BlogpostCrudController::getEntityFqcn">getEntityFqcn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/BlogpostCrudController.php.html#22"><abbr title="App\Controller\Admin\BlogpostCrudController::configureFields">configureFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/BlogpostCrudController.php.html#33"><abbr title="App\Controller\Admin\BlogpostCrudController::configureCrud">configureCrud</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CategoryCrudController.php.html#15"><abbr title="App\Controller\Admin\CategoryCrudController::getEntityFqcn">getEntityFqcn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CategoryCrudController.php.html#20"><abbr title="App\Controller\Admin\CategoryCrudController::configureFields">configureFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CommentCrudController.php.html#21"><abbr title="App\Controller\Admin\CommentCrudController::getEntityFqcn">getEntityFqcn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CommentCrudController.php.html#26"><abbr title="App\Controller\Admin\CommentCrudController::configureFields">configureFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CommentCrudController.php.html#39"><abbr title="App\Controller\Admin\CommentCrudController::configureActions">configureActions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/CommentCrudController.php.html#46"><abbr title="App\Controller\Admin\CommentCrudController::configureCrud">configureCrud</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/DashboardController.php.html#18"><abbr title="App\Controller\Admin\DashboardController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/DashboardController.php.html#24"><abbr title="App\Controller\Admin\DashboardController::configureDashboard">configureDashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/DashboardController.php.html#30"><abbr title="App\Controller\Admin\DashboardController::configureMenuItems">configureMenuItems</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/PaintCrudController.php.html#22"><abbr title="App\Controller\Admin\PaintCrudController::getEntityFqcn">getEntityFqcn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/PaintCrudController.php.html#27"><abbr title="App\Controller\Admin\PaintCrudController::configureFields">configureFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/PaintCrudController.php.html#55"><abbr title="App\Controller\Admin\PaintCrudController::configureCrud">configureCrud</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/UserCrudController.php.html#16"><abbr title="App\Controller\Admin\UserCrudController::getEntityFqcn">getEntityFqcn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/UserCrudController.php.html#21"><abbr title="App\Controller\Admin\UserCrudController::configureFields">configureFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/UserCrudController.php.html#31"><abbr title="App\Controller\Admin\UserCrudController::configureActions">configureActions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Admin/UserCrudController.php.html#38"><abbr title="App\Controller\Admin\UserCrudController::configureCrud">configureCrud</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AproposController.php.html#12"><abbr title="App\Controller\AproposController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BlogpostController.php.html#19"><abbr title="App\Controller\BlogpostController::actualites">actualites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BlogpostController.php.html#38"><abbr title="App\Controller\BlogpostController::detail">detail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ContactController.php.html#15"><abbr title="App\Controller\ContactController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HomeController.php.html#13"><abbr title="App\Controller\HomeController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PeintureController.php.html#19"><abbr title="App\Controller\PeintureController::realisations">realisations</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PeintureController.php.html#39"><abbr title="App\Controller\PeintureController::details">details</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PortfolioController.php.html#14"><abbr title="App\Controller\PortfolioController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PortfolioController.php.html#22"><abbr title="App\Controller\PortfolioController::categorie">categorie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#12"><abbr title="App\Controller\SecurityController::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#27"><abbr title="App\Controller\SecurityController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#18"><abbr title="App\DataFixtures\AppFixtures::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#22"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Blogpost.php.html#138"><abbr title="App\Entity\Blogpost::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Category.php.html#104"><abbr title="App\Entity\Category::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Comment.php.html#115"><abbr title="App\Entity\Comment::isIsPublished">isIsPublished</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Comment.php.html#120"><abbr title="App\Entity\Comment::setIsPublished">setIsPublished</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Contact.php.html#32"><abbr title="App\Entity\Contact::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Paint.php.html#213"><abbr title="App\Entity\Paint::setImageFile">setImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Paint.php.html#222"><abbr title="App\Entity\Paint::getImageFile">getImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Paint.php.html#293"><abbr title="App\Entity\Paint::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#82"><abbr title="App\Entity\User::getUserIdentifier">getUserIdentifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#90"><abbr title="App\Entity\User::getRoles">getRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#99"><abbr title="App\Entity\User::setRoles">setRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#124"><abbr title="App\Entity\User::eraseCredentials">eraseCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#154"><abbr title="App\Entity\User::getPhoneNumber">getPhoneNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#159"><abbr title="App\Entity\User::setPhoneNumber">setPhoneNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#18"><abbr title="App\EventSubscriber\EasyAdminSubscriber::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#24"><abbr title="App\EventSubscriber\EasyAdminSubscriber::getSubscribedEvents">getSubscribedEvents</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#30"><abbr title="App\EventSubscriber\EasyAdminSubscriber::setDateAndUser">setDateAndUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CommentType.php.html#19"><abbr title="App\Form\CommentType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/CommentType.php.html#29"><abbr title="App\Form\CommentType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ContactType.php.html#17"><abbr title="App\Form\ContactType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ContactType.php.html#27"><abbr title="App\Form\ContactType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BlogpostRepository.php.html#19"><abbr title="App\Repository\BlogpostRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BlogpostRepository.php.html#28"><abbr title="App\Repository\BlogpostRepository::lastTree">lastTree</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CategoryRepository.php.html#19"><abbr title="App\Repository\CategoryRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CommentRepository.php.html#21"><abbr title="App\Repository\CommentRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/CommentRepository.php.html#26"><abbr title="App\Repository\CommentRepository::findComment">findComment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ContactRepository.php.html#19"><abbr title="App\Repository\ContactRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PaintRepository.php.html#21"><abbr title="App\Repository\PaintRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PaintRepository.php.html#30"><abbr title="App\Repository\PaintRepository::lastTree">lastTree</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PaintRepository.php.html#43"><abbr title="App\Repository\PaintRepository::findAllPortfolio">findAllPortfolio</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#23"><abbr title="App\Repository\UserRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#31"><abbr title="App\Repository\UserRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#42"><abbr title="App\Repository\UserRepository::getPainter">getPainter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#25"><abbr title="App\Security\AppAuthenticator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#29"><abbr title="App\Security\AppAuthenticator::authenticate">authenticate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#45"><abbr title="App\Security\AppAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#56"><abbr title="App\Security\AppAuthenticator::getLoginUrl">getLoginUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/CommentService.php.html#18"><abbr title="App\Service\CommentService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/CommentService.php.html#23"><abbr title="App\Service\CommentService::persistComment">persistComment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#14"><abbr title="App\Service\ContactService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#19"><abbr title="App\Service\ContactService::persistContact">persistContact</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#32"><abbr title="App\Service\ContactService::isSend">isSend</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Twig/AppExtension.php.html#13"><abbr title="App\Twig\AppExtension::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Twig/AppExtension.php.html#18"><abbr title="App\Twig\AppExtension::getFunctions">getFunctions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Twig/AppExtension.php.html#24"><abbr title="App\Twig\AppExtension::category">category</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="DataFixtures/AppFixtures.php.html#22"><abbr title="App\DataFixtures\AppFixtures::load">load</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/BlogpostController.php.html#38"><abbr title="App\Controller\BlogpostController::detail">detail</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ContactController.php.html#15"><abbr title="App\Controller\ContactController::index">index</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/PeintureController.php.html#39"><abbr title="App\Controller\PeintureController::details">details</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="EventSubscriber/EasyAdminSubscriber.php.html#30"><abbr title="App\EventSubscriber\EasyAdminSubscriber::setDateAndUser">setDateAndUser</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Repository/CommentRepository.php.html#26"><abbr title="App\Repository\CommentRepository::findComment">findComment</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Command/SendContactCommand.php.html#36"><abbr title="App\Command\SendContactCommand::execute">execute</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/PortfolioController.php.html#22"><abbr title="App\Controller\PortfolioController::categorie">categorie</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Paint.php.html#213"><abbr title="App\Entity\Paint::setImageFile">setImageFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#31"><abbr title="App\Repository\UserRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/AppAuthenticator.php.html#45"><abbr title="App\Security\AppAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/ContactService.php.html#19"><abbr title="App\Service\ContactService::persistContact">persistContact</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.29</a> using <a href="https://secure.php.net/" target="_top">PHP 8.2.12</a> and <a href="https://phpunit.de/">PHPUnit 9.6.15</a> at Sun Dec 17 0:37:30 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.29" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.29" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.29" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([29,0,0,0,0,0,0,0,1,1,4,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([82,0,0,0,0,0,0,0,0,0,0,101], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"Command\/CreateUserCommand.php.html#13\">App\\Command\\CreateUserCommand<\/a>"],[0,3,"<a href=\"Command\/SendContactCommand.php.html#15\">App\\Command\\SendContactCommand<\/a>"],[0,3,"<a href=\"Controller\/Admin\/BlogpostCrudController.php.html#15\">App\\Controller\\Admin\\BlogpostCrudController<\/a>"],[0,2,"<a href=\"Controller\/Admin\/CategoryCrudController.php.html#13\">App\\Controller\\Admin\\CategoryCrudController<\/a>"],[0,4,"<a href=\"Controller\/Admin\/CommentCrudController.php.html#19\">App\\Controller\\Admin\\CommentCrudController<\/a>"],[0,3,"<a href=\"Controller\/Admin\/DashboardController.php.html#16\">App\\Controller\\Admin\\DashboardController<\/a>"],[0,3,"<a href=\"Controller\/Admin\/PaintCrudController.php.html#20\">App\\Controller\\Admin\\PaintCrudController<\/a>"],[0,4,"<a href=\"Controller\/Admin\/UserCrudController.php.html#14\">App\\Controller\\Admin\\UserCrudController<\/a>"],[0,1,"<a href=\"Controller\/AproposController.php.html#10\">App\\Controller\\AproposController<\/a>"],[0,4,"<a href=\"Controller\/BlogpostController.php.html#17\">App\\Controller\\BlogpostController<\/a>"],[0,3,"<a href=\"Controller\/ContactController.php.html#13\">App\\Controller\\ContactController<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#11\">App\\Controller\\HomeController<\/a>"],[0,4,"<a href=\"Controller\/PeintureController.php.html#17\">App\\Controller\\PeintureController<\/a>"],[0,3,"<a href=\"Controller\/PortfolioController.php.html#12\">App\\Controller\\PortfolioController<\/a>"],[0,2,"<a href=\"Controller\/SecurityController.php.html#10\">App\\Controller\\SecurityController<\/a>"],[0,6,"<a href=\"DataFixtures\/AppFixtures.php.html#14\">App\\DataFixtures\\AppFixtures<\/a>"],[96.29629629629629,19,"<a href=\"Entity\/Blogpost.php.html#11\">App\\Entity\\Blogpost<\/a>"],[95,14,"<a href=\"Entity\/Category.php.html#11\">App\\Entity\\Category<\/a>"],[86.36363636363636,15,"<a href=\"Entity\/Comment.php.html#9\">App\\Entity\\Comment<\/a>"],[93.75,11,"<a href=\"Entity\/Contact.php.html#9\">App\\Entity\\Contact<\/a>"],[91.52542372881356,40,"<a href=\"Entity\/Paint.php.html#13\">App\\Entity\\Paint<\/a>"],[79.59183673469387,32,"<a href=\"Entity\/User.php.html#13\">App\\Entity\\User<\/a>"],[0,5,"<a href=\"EventSubscriber\/EasyAdminSubscriber.php.html#13\">App\\EventSubscriber\\EasyAdminSubscriber<\/a>"],[0,2,"<a href=\"Form\/CommentType.php.html#17\">App\\Form\\CommentType<\/a>"],[0,2,"<a href=\"Form\/ContactType.php.html#15\">App\\Form\\ContactType<\/a>"],[100,0,"<a href=\"Kernel.php.html#8\">App\\Kernel<\/a>"],[0,2,"<a href=\"Repository\/BlogpostRepository.php.html#17\">App\\Repository\\BlogpostRepository<\/a>"],[0,1,"<a href=\"Repository\/CategoryRepository.php.html#17\">App\\Repository\\CategoryRepository<\/a>"],[0,4,"<a href=\"Repository\/CommentRepository.php.html#19\">App\\Repository\\CommentRepository<\/a>"],[0,1,"<a href=\"Repository\/ContactRepository.php.html#17\">App\\Repository\\ContactRepository<\/a>"],[0,3,"<a href=\"Repository\/PaintRepository.php.html#19\">App\\Repository\\PaintRepository<\/a>"],[0,4,"<a href=\"Repository\/UserRepository.php.html#21\">App\\Repository\\UserRepository<\/a>"],[0,5,"<a href=\"Security\/AppAuthenticator.php.html#19\">App\\Security\\AppAuthenticator<\/a>"],[0,2,"<a href=\"Service\/CommentService.php.html#14\">App\\Service\\CommentService<\/a>"],[0,4,"<a href=\"Service\/ContactService.php.html#10\">App\\Service\\ContactService<\/a>"],[0,3,"<a href=\"Twig\/AppExtension.php.html#9\">App\\Twig\\AppExtension<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Command\/CreateUserCommand.php.html#21\">App\\Command\\CreateUserCommand::__construct<\/a>"],[0,1,"<a href=\"Command\/CreateUserCommand.php.html#34\">App\\Command\\CreateUserCommand::configure<\/a>"],[0,1,"<a href=\"Command\/CreateUserCommand.php.html#41\">App\\Command\\CreateUserCommand::execute<\/a>"],[0,1,"<a href=\"Command\/SendContactCommand.php.html#23\">App\\Command\\SendContactCommand::__construct<\/a>"],[0,2,"<a href=\"Command\/SendContactCommand.php.html#36\">App\\Command\\SendContactCommand::execute<\/a>"],[0,1,"<a href=\"Controller\/Admin\/BlogpostCrudController.php.html#17\">App\\Controller\\Admin\\BlogpostCrudController::getEntityFqcn<\/a>"],[0,1,"<a href=\"Controller\/Admin\/BlogpostCrudController.php.html#22\">App\\Controller\\Admin\\BlogpostCrudController::configureFields<\/a>"],[0,1,"<a href=\"Controller\/Admin\/BlogpostCrudController.php.html#33\">App\\Controller\\Admin\\BlogpostCrudController::configureCrud<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CategoryCrudController.php.html#15\">App\\Controller\\Admin\\CategoryCrudController::getEntityFqcn<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CategoryCrudController.php.html#20\">App\\Controller\\Admin\\CategoryCrudController::configureFields<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CommentCrudController.php.html#21\">App\\Controller\\Admin\\CommentCrudController::getEntityFqcn<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CommentCrudController.php.html#26\">App\\Controller\\Admin\\CommentCrudController::configureFields<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CommentCrudController.php.html#39\">App\\Controller\\Admin\\CommentCrudController::configureActions<\/a>"],[0,1,"<a href=\"Controller\/Admin\/CommentCrudController.php.html#46\">App\\Controller\\Admin\\CommentCrudController::configureCrud<\/a>"],[0,1,"<a href=\"Controller\/Admin\/DashboardController.php.html#18\">App\\Controller\\Admin\\DashboardController::index<\/a>"],[0,1,"<a href=\"Controller\/Admin\/DashboardController.php.html#24\">App\\Controller\\Admin\\DashboardController::configureDashboard<\/a>"],[0,1,"<a href=\"Controller\/Admin\/DashboardController.php.html#30\">App\\Controller\\Admin\\DashboardController::configureMenuItems<\/a>"],[0,1,"<a href=\"Controller\/Admin\/PaintCrudController.php.html#22\">App\\Controller\\Admin\\PaintCrudController::getEntityFqcn<\/a>"],[0,1,"<a href=\"Controller\/Admin\/PaintCrudController.php.html#27\">App\\Controller\\Admin\\PaintCrudController::configureFields<\/a>"],[0,1,"<a href=\"Controller\/Admin\/PaintCrudController.php.html#55\">App\\Controller\\Admin\\PaintCrudController::configureCrud<\/a>"],[0,1,"<a href=\"Controller\/Admin\/UserCrudController.php.html#16\">App\\Controller\\Admin\\UserCrudController::getEntityFqcn<\/a>"],[0,1,"<a href=\"Controller\/Admin\/UserCrudController.php.html#21\">App\\Controller\\Admin\\UserCrudController::configureFields<\/a>"],[0,1,"<a href=\"Controller\/Admin\/UserCrudController.php.html#31\">App\\Controller\\Admin\\UserCrudController::configureActions<\/a>"],[0,1,"<a href=\"Controller\/Admin\/UserCrudController.php.html#38\">App\\Controller\\Admin\\UserCrudController::configureCrud<\/a>"],[0,1,"<a href=\"Controller\/AproposController.php.html#12\">App\\Controller\\AproposController::index<\/a>"],[0,1,"<a href=\"Controller\/BlogpostController.php.html#19\">App\\Controller\\BlogpostController::actualites<\/a>"],[0,3,"<a href=\"Controller\/BlogpostController.php.html#38\">App\\Controller\\BlogpostController::detail<\/a>"],[0,3,"<a href=\"Controller\/ContactController.php.html#15\">App\\Controller\\ContactController::index<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#13\">App\\Controller\\HomeController::index<\/a>"],[0,1,"<a href=\"Controller\/PeintureController.php.html#19\">App\\Controller\\PeintureController::realisations<\/a>"],[0,3,"<a href=\"Controller\/PeintureController.php.html#39\">App\\Controller\\PeintureController::details<\/a>"],[0,1,"<a href=\"Controller\/PortfolioController.php.html#14\">App\\Controller\\PortfolioController::index<\/a>"],[0,2,"<a href=\"Controller\/PortfolioController.php.html#22\">App\\Controller\\PortfolioController::categorie<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#12\">App\\Controller\\SecurityController::login<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#27\">App\\Controller\\SecurityController::logout<\/a>"],[0,1,"<a href=\"DataFixtures\/AppFixtures.php.html#18\">App\\DataFixtures\\AppFixtures::__construct<\/a>"],[0,5,"<a href=\"DataFixtures\/AppFixtures.php.html#22\">App\\DataFixtures\\AppFixtures::load<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#38\">App\\Entity\\Blogpost::__construct<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#43\">App\\Entity\\Blogpost::getId<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#48\">App\\Entity\\Blogpost::getTitle<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#53\">App\\Entity\\Blogpost::setTitle<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#60\">App\\Entity\\Blogpost::getContent<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#65\">App\\Entity\\Blogpost::setContent<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#72\">App\\Entity\\Blogpost::getSlug<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#77\">App\\Entity\\Blogpost::setSlug<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#84\">App\\Entity\\Blogpost::getDate<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#89\">App\\Entity\\Blogpost::setDate<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#96\">App\\Entity\\Blogpost::getUser<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#101\">App\\Entity\\Blogpost::setUser<\/a>"],[100,1,"<a href=\"Entity\/Blogpost.php.html#111\">App\\Entity\\Blogpost::getComments<\/a>"],[100,2,"<a href=\"Entity\/Blogpost.php.html#116\">App\\Entity\\Blogpost::addComment<\/a>"],[100,3,"<a href=\"Entity\/Blogpost.php.html#126\">App\\Entity\\Blogpost::removeComment<\/a>"],[0,1,"<a href=\"Entity\/Blogpost.php.html#138\">App\\Entity\\Blogpost::__toString<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#31\">App\\Entity\\Category::__construct<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#36\">App\\Entity\\Category::getId<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#41\">App\\Entity\\Category::getName<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#46\">App\\Entity\\Category::setName<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#53\">App\\Entity\\Category::getDescription<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#58\">App\\Entity\\Category::setDescription<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#65\">App\\Entity\\Category::getSlug<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#70\">App\\Entity\\Category::setSlug<\/a>"],[100,1,"<a href=\"Entity\/Category.php.html#80\">App\\Entity\\Category::getPaints<\/a>"],[100,2,"<a href=\"Entity\/Category.php.html#85\">App\\Entity\\Category::addPaint<\/a>"],[100,2,"<a href=\"Entity\/Category.php.html#95\">App\\Entity\\Category::removePaint<\/a>"],[0,1,"<a href=\"Entity\/Category.php.html#104\">App\\Entity\\Category::__toString<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#38\">App\\Entity\\Comment::getId<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#43\">App\\Entity\\Comment::getAutor<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#48\">App\\Entity\\Comment::setAutor<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#55\">App\\Entity\\Comment::getEmail<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#60\">App\\Entity\\Comment::setEmail<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#67\">App\\Entity\\Comment::getContent<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#72\">App\\Entity\\Comment::setContent<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#79\">App\\Entity\\Comment::getDate<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#84\">App\\Entity\\Comment::setDate<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#91\">App\\Entity\\Comment::getPaint<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#96\">App\\Entity\\Comment::setPaint<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#103\">App\\Entity\\Comment::getBlogpost<\/a>"],[100,1,"<a href=\"Entity\/Comment.php.html#108\">App\\Entity\\Comment::setBlogpost<\/a>"],[0,1,"<a href=\"Entity\/Comment.php.html#115\">App\\Entity\\Comment::isIsPublished<\/a>"],[0,1,"<a href=\"Entity\/Comment.php.html#120\">App\\Entity\\Comment::setIsPublished<\/a>"],[0,1,"<a href=\"Entity\/Contact.php.html#32\">App\\Entity\\Contact::getId<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#37\">App\\Entity\\Contact::getName<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#42\">App\\Entity\\Contact::setName<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#49\">App\\Entity\\Contact::getEmail<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#54\">App\\Entity\\Contact::setEmail<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#61\">App\\Entity\\Contact::getMessage<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#66\">App\\Entity\\Contact::setMessage<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#73\">App\\Entity\\Contact::getCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#78\">App\\Entity\\Contact::setCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#85\">App\\Entity\\Contact::getIsSend<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#90\">App\\Entity\\Contact::setIsSend<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#69\">App\\Entity\\Paint::__construct<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#75\">App\\Entity\\Paint::getId<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#80\">App\\Entity\\Paint::getName<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#85\">App\\Entity\\Paint::setName<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#92\">App\\Entity\\Paint::getHeight<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#97\">App\\Entity\\Paint::setHeight<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#104\">App\\Entity\\Paint::getWidth<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#109\">App\\Entity\\Paint::setWidth<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#116\">App\\Entity\\Paint::isOnSale<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#121\">App\\Entity\\Paint::setOnSale<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#128\">App\\Entity\\Paint::getPrice<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#133\">App\\Entity\\Paint::setPrice<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#140\">App\\Entity\\Paint::getDateOfCompletion<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#146\">App\\Entity\\Paint::setDateOfCompletion<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#153\">App\\Entity\\Paint::getDate<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#158\">App\\Entity\\Paint::setDate<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#165\">App\\Entity\\Paint::getDescription<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#170\">App\\Entity\\Paint::setDescription<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#177\">App\\Entity\\Paint::isPortfolio<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#182\">App\\Entity\\Paint::setPortfolio<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#189\">App\\Entity\\Paint::getSlug<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#194\">App\\Entity\\Paint::setSlug<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#201\">App\\Entity\\Paint::getFile<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#206\">App\\Entity\\Paint::setFile<\/a>"],[0,2,"<a href=\"Entity\/Paint.php.html#213\">App\\Entity\\Paint::setImageFile<\/a>"],[0,1,"<a href=\"Entity\/Paint.php.html#222\">App\\Entity\\Paint::getImageFile<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#227\">App\\Entity\\Paint::getUser<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#232\">App\\Entity\\Paint::setUser<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#242\">App\\Entity\\Paint::getCategory<\/a>"],[100,2,"<a href=\"Entity\/Paint.php.html#247\">App\\Entity\\Paint::addCategory<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#256\">App\\Entity\\Paint::removeCategory<\/a>"],[100,1,"<a href=\"Entity\/Paint.php.html#266\">App\\Entity\\Paint::getComments<\/a>"],[100,2,"<a href=\"Entity\/Paint.php.html#271\">App\\Entity\\Paint::addComment<\/a>"],[100,3,"<a href=\"Entity\/Paint.php.html#281\">App\\Entity\\Paint::removeComment<\/a>"],[0,1,"<a href=\"Entity\/Paint.php.html#293\">App\\Entity\\Paint::__toString<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#54\">App\\Entity\\User::__construct<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#60\">App\\Entity\\User::getId<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#65\">App\\Entity\\User::getEmail<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#70\">App\\Entity\\User::setEmail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#82\">App\\Entity\\User::getUserIdentifier<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#90\">App\\Entity\\User::getRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#99\">App\\Entity\\User::setRoles<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#109\">App\\Entity\\User::getPassword<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#114\">App\\Entity\\User::setPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#124\">App\\Entity\\User::eraseCredentials<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#130\">App\\Entity\\User::getFirstname<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#135\">App\\Entity\\User::setFirstname<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#142\">App\\Entity\\User::getName<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#147\">App\\Entity\\User::setName<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#154\">App\\Entity\\User::getPhoneNumber<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#159\">App\\Entity\\User::setPhoneNumber<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#166\">App\\Entity\\User::getAbout<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#171\">App\\Entity\\User::setAbout<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#178\">App\\Entity\\User::getInstagram<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#183\">App\\Entity\\User::setInstagram<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#193\">App\\Entity\\User::getPaints<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#198\">App\\Entity\\User::addPaint<\/a>"],[100,3,"<a href=\"Entity\/User.php.html#208\">App\\Entity\\User::removePaint<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#223\">App\\Entity\\User::getBlogposts<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#228\">App\\Entity\\User::addBlogpost<\/a>"],[100,3,"<a href=\"Entity\/User.php.html#238\">App\\Entity\\User::removeBlogpost<\/a>"],[0,1,"<a href=\"EventSubscriber\/EasyAdminSubscriber.php.html#18\">App\\EventSubscriber\\EasyAdminSubscriber::__construct<\/a>"],[0,1,"<a href=\"EventSubscriber\/EasyAdminSubscriber.php.html#24\">App\\EventSubscriber\\EasyAdminSubscriber::getSubscribedEvents<\/a>"],[0,3,"<a href=\"EventSubscriber\/EasyAdminSubscriber.php.html#30\">App\\EventSubscriber\\EasyAdminSubscriber::setDateAndUser<\/a>"],[0,1,"<a href=\"Form\/CommentType.php.html#19\">App\\Form\\CommentType::buildForm<\/a>"],[0,1,"<a href=\"Form\/CommentType.php.html#29\">App\\Form\\CommentType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/ContactType.php.html#17\">App\\Form\\ContactType::buildForm<\/a>"],[0,1,"<a href=\"Form\/ContactType.php.html#27\">App\\Form\\ContactType::configureOptions<\/a>"],[0,1,"<a href=\"Repository\/BlogpostRepository.php.html#19\">App\\Repository\\BlogpostRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/BlogpostRepository.php.html#28\">App\\Repository\\BlogpostRepository::lastTree<\/a>"],[0,1,"<a href=\"Repository\/CategoryRepository.php.html#19\">App\\Repository\\CategoryRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/CommentRepository.php.html#21\">App\\Repository\\CommentRepository::__construct<\/a>"],[0,3,"<a href=\"Repository\/CommentRepository.php.html#26\">App\\Repository\\CommentRepository::findComment<\/a>"],[0,1,"<a href=\"Repository\/ContactRepository.php.html#19\">App\\Repository\\ContactRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/PaintRepository.php.html#21\">App\\Repository\\PaintRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/PaintRepository.php.html#30\">App\\Repository\\PaintRepository::lastTree<\/a>"],[0,1,"<a href=\"Repository\/PaintRepository.php.html#43\">App\\Repository\\PaintRepository::findAllPortfolio<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#23\">App\\Repository\\UserRepository::__construct<\/a>"],[0,2,"<a href=\"Repository\/UserRepository.php.html#31\">App\\Repository\\UserRepository::upgradePassword<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#42\">App\\Repository\\UserRepository::getPainter<\/a>"],[0,1,"<a href=\"Security\/AppAuthenticator.php.html#25\">App\\Security\\AppAuthenticator::__construct<\/a>"],[0,1,"<a href=\"Security\/AppAuthenticator.php.html#29\">App\\Security\\AppAuthenticator::authenticate<\/a>"],[0,2,"<a href=\"Security\/AppAuthenticator.php.html#45\">App\\Security\\AppAuthenticator::onAuthenticationSuccess<\/a>"],[0,1,"<a href=\"Security\/AppAuthenticator.php.html#56\">App\\Security\\AppAuthenticator::getLoginUrl<\/a>"],[0,1,"<a href=\"Service\/CommentService.php.html#18\">App\\Service\\CommentService::__construct<\/a>"],[0,1,"<a href=\"Service\/CommentService.php.html#23\">App\\Service\\CommentService::persistComment<\/a>"],[0,1,"<a href=\"Service\/ContactService.php.html#14\">App\\Service\\ContactService::__construct<\/a>"],[0,2,"<a href=\"Service\/ContactService.php.html#19\">App\\Service\\ContactService::persistContact<\/a>"],[0,1,"<a href=\"Service\/ContactService.php.html#32\">App\\Service\\ContactService::isSend<\/a>"],[0,1,"<a href=\"Twig\/AppExtension.php.html#13\">App\\Twig\\AppExtension::__construct<\/a>"],[0,1,"<a href=\"Twig\/AppExtension.php.html#18\">App\\Twig\\AppExtension::getFunctions<\/a>"],[0,1,"<a href=\"Twig\/AppExtension.php.html#24\">App\\Twig\\AppExtension::category<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

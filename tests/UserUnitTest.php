@@ -53,6 +53,8 @@ class UserUnitTest extends TestCase
         $this->assertEmpty($user->getName());
         $this->assertEmpty($user->getAbout());
         $this->assertEmpty($user->getInstagram());
+        $this->assertEmpty($user->getId());
+
     }
 
     public function testAddGetRemovePaint()
