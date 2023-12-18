@@ -38,9 +38,15 @@
                     <li class="list-group-item">
                         <h6 class="d-flex mb-0 text-uppercase">
                             Prix
-                            <span class="ms-auto"><strong>{{paint.price}}€</strong></span>
+                            <span class="ms-auto">
+                                {% if not paint.onsale %}
+                                    <s>{{paint.price}}€</s> <span class="text-muted">Vendu</span>
+                                {% else %}
+                                    <strong>{{paint.price}}€</strong>
+                                {% endif %}
+                            </span>
                         </h6>
-                    </li>   
+                    </li>
                 </ul>
             </aside>
         </div>

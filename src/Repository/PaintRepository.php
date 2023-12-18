@@ -48,8 +48,6 @@ class PaintRepository extends ServiceEntityRepository
         ->setParameter('category', $category)
         ->getQuery()
         ->getResult();
-
-    dump($results); // Ajouter cette ligne pour déboguer
     return $results;
     }
     

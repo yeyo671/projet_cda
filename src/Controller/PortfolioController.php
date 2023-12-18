@@ -31,7 +31,7 @@ class PortfolioController extends AbstractController
             'paints' => $paints,
         ]);
     }
-    
+
     
 
 }

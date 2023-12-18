@@ -9,14 +9,16 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(
+    name: 'app:create-user',
+    description: 'Creates a new user.'
+)]
 class CreateUserCommand extends Command
 {
     private $entityManagerInterface;
     private $encoder;
-
-    // Static property for the command name
-    protected static $defaultName = 'app:create-user';
 
     public function __construct(
         EntityManagerInterface $entityManagerInterface,
@@ -52,8 +54,6 @@ class CreateUserCommand extends Command
              ->setName('')
              ->setPhoneNumber('');
 
-        // For debugging purposes
-        dump($user);
 
         // Persist the user entity
         $this->entityManagerInterface->persist($user);
