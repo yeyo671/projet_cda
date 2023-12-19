@@ -43,7 +43,6 @@ class SendContactCommand extends Command {
                 ->to($address)
                 ->subject('Nouveau message de ' . $mail->getName())
                 ->text($mail->getMessage());
-    
             $this->mailer->send($email);
             $this->contactService->isSend($mail);
         }

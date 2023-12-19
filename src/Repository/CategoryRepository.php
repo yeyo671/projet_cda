@@ -21,6 +21,19 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
+
+    public function findCategoriesWithPortfolioPaints()
+    {
+        return $this->createQueryBuilder('c')
+            ->innerJoin('c.paints', 'p')
+            ->where('p.portfolio = :portfolio')
+            ->setParameter('portfolio', true)
+            ->groupBy('c.id')
+            ->getQuery()
+            ->getResult();
+    }
+
+
 //    /**
 //     * @return Category[] Returns an array of Category objects
 //     */

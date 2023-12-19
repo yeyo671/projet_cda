@@ -15,7 +15,7 @@ class PortfolioController extends AbstractController
     public function index(CategoryRepository $categoryRepository): Response
     {
         return $this->render('portfolio/index.html.twig', [
-            'categories' => $categoryRepository->findAll(),
+            'categories' => $categoryRepository->findCategoriesWithPortfolioPaints(),
         ]);
     }
 

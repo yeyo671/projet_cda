@@ -4,6 +4,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            .main-content {
+                flex: 1;
+            }
+            footer {
+                flex-shrink: 0;
+            }
+        </style>
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -13,8 +30,10 @@
         {% endblock %}
     </head>
     <body>
-        {% include 'base/nav.html.twig' %}
-        {% block body %}{% endblock %}
+        <div class="main-content">
+            {% include 'base/nav.html.twig' %}
+            {% block body %}{% endblock %}
+        </div>
         {% include 'base/footer.html.twig' %}
     </body>
 </html>
