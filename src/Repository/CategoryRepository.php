@@ -24,15 +24,22 @@ class CategoryRepository extends ServiceEntityRepository
 
     public function findCategoriesWithPortfolioPaints()
     {
+        // Commence la création d'une requête pour récupérer des données.
         return $this->createQueryBuilder('c')
+            // Joint cette table avec une autre table 'paints' liée aux catégories.
             ->innerJoin('c.paints', 'p')
+            // Ajoute une condition : sélectionne seulement les peintures qui sont dans le portfolio.
             ->where('p.portfolio = :portfolio')
+            // Définit la valeur 'true' pour la condition 'portfolio' dans la requête.
             ->setParameter('portfolio', true)
+            // Groupe les résultats par l'ID de la catégorie pour éviter les doublons.
             ->groupBy('c.id')
+            // Finalise et prépare la requête pour l'exécution.
             ->getQuery()
+            // Exécute la requête et obtient les résultats (les catégories).
             ->getResult();
     }
-
+    
 
 //    /**
 //     * @return Category[] Returns an array of Category objects

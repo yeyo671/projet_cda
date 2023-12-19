@@ -30,22 +30,34 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
      */
     public function upgradePassword(PasswordAuthenticatedUserInterface $user, string $newHashedPassword): void
     {
+        // Vérifie si l'utilisateur est une instance de la classe User.
         if (!$user instanceof User) {
+            // Si ce n'est pas le cas, lance une exception indiquant que le type d'utilisateur n'est pas supporté.
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', $user::class));
         }
-
+    
+        // Met à jour le mot de passe de l'utilisateur avec le nouveau mot de passe haché.
         $user->setPassword($newHashedPassword);
+        // Persiste les modifications de l'utilisateur dans la base de données.
         $this->getEntityManager()->persist($user);
+        // Enregistre les modifications dans la base de données.
         $this->getEntityManager()->flush();
     }
+    
 
     public function getPainter(){
+        // Commence la création d'une requête pour récupérer un utilisateur.
         return $this->createQueryBuilder('u')
+            // Ajoute une condition pour filtrer les utilisateurs ayant le rôle de peintre.
             ->where('u.roles LIKE :roles')
+            // Définit le rôle recherché dans les paramètres de la requête.
             ->setParameter('roles', '%"ROLE_PEINTRE"%')
+            // Prépare la requête pour l'exécution.
             ->getQuery()
+            // Exécute la requête et obtient soit un résultat, soit null s'il n'y a pas de correspondance.
             ->getOneOrNullResult();
     }
+    
 
 
 //    /**

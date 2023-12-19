@@ -28,10 +28,15 @@ class PaintRepository extends ServiceEntityRepository
     */
 
     public function lastTree(){
+        // Débute la création d'une requête pour récupérer des objets Paint.
         return $this->createQueryBuilder('p')
+            // Ordonne les résultats par l'ID de Paint en ordre décroissant.
             ->orderBy('p.id', 'DESC')
+            // Limite les résultats aux trois derniers objets Paint.
             ->setMaxResults(3)
+            // Prépare la requête pour l'exécution.
             ->getQuery()
+            // Exécute la requête et obtient les résultats.
             ->getResult()
         ;
     }
@@ -42,13 +47,21 @@ class PaintRepository extends ServiceEntityRepository
 
     public function findAllPortfolio(Category $category): array
     {
+        // Débute la création d'une requête pour récupérer des objets Paint.
         $results = $this->createQueryBuilder('p')
-        ->where(':category MEMBER OF p.category')
-        ->andWhere('p.portfolio = TRUE')
-        ->setParameter('category', $category)
-        ->getQuery()
-        ->getResult();
-    return $results;
+            // Ajoute une condition où la catégorie donnée fait partie des catégories de l'objet Paint.
+            ->where(':category MEMBER OF p.category')
+            // Ajoute une condition pour sélectionner uniquement les objets Paint qui sont dans le portfolio.
+            ->andWhere('p.portfolio = TRUE')
+            // Définit la catégorie pour la condition de la requête.
+            ->setParameter('category', $category)
+            // Prépare la requête pour l'exécution.
+            ->getQuery()
+            // Exécute la requête et stocke les résultats.
+            ->getResult();
+    
+        // Retourne les résultats de la requête.
+        return $results;
     }
     
 }

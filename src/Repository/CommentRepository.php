@@ -18,30 +18,33 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class CommentRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
-    {
-        parent::__construct($registry, Comment::class);
-    }
-
     public function findComment($value)
     {
+        // Si l'objet passé en paramètre est un Blogpost, on prépare la recherche pour un blogpost.
         if($value instanceof Blogpost){
             $object = 'blogpost';
         }
-
+    
+        // Si l'objet est une Peinture, on prépare la recherche pour une peinture.
         if($value instanceof Paint){
             $object = 'paint';
         }
-
+    
+        // Commence la création de la requête pour récupérer des commentaires.
         return $this->createQueryBuilder('c')
+            // Ajoute une condition où le commentaire doit être associé à l'objet (blogpost ou paint).
             ->andWhere('c.' .$object . ' = :val')
+            // Ajoute une autre condition pour ne récupérer que les commentaires publiés.
             ->andWhere('c.isPublished = true')
+            // Définit la valeur de ':val' au ID de l'objet (blogpost ou paint).
             ->setParameter('val', $value->getId())
+            // Trie les résultats par ID de commentaire, en ordre décroissant.
             ->orderBy('c.id', 'DESC')
+            // Prépare la requête pour l'exécution.
             ->getQuery()
+            // Exécute la requête et retourne les résultats (les commentaires).
             ->getResult()
         ;
     }
-
-
+    
 }
